@@ -162,7 +162,8 @@ namespace nataC_fo_sreltteS
                // invoke the application starting point
                //method.Invoke(obj, null);
                //Process.Start(nataC_fo_sreltteS.Properties.Resources.nataCServer);
-               System.Diagnostics.Process.Start(@"../../../nataC Server\\bin\\Debug\\nataC Server.exe");
+               var curretDirctory = Directory.GetCurrentDirectory();
+               System.Diagnostics.Process.Start(curretDirctory + @"/Resources/nataCServer.exe");
 
             }
             catch (FileNotFoundException ex)
